@@ -10,12 +10,14 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 
-doc1='Hola bola'
-doc2='hola tu'
-doc3='hola todos'
-doc4='hola pianola'
+doc1='Machine learning es genial'
+doc2='Me gusta programar en Machine Learning'
+doc3='Python es padre en Machine Learning'
+doc4='pipo'
 corpus=[doc1,doc2,doc3,doc4]
-#Para este ejemplo , para la palabra "comprobar" el valor de TF IDF (cálculo manual) es : 
+
+#En TF IDF el Ln(N/#doc where word appears) es Ln (logaritmo natural).
+#Para este ejemplo , para la palabra "comprobar" el valor de TF IDF (cálculo manual) es : 0.69314718
 
 vectorizer = TfidfVectorizer()
 vectors = vectorizer.fit_transform(corpus)
