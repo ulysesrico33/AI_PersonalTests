@@ -7,6 +7,7 @@ de los procedimientos, entonces funciona a gran escala
 
 from scipy.linalg import svd
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 import pandas as pd
 
 doc1='Hola bola'
@@ -22,4 +23,5 @@ feature_names = vectorizer.get_feature_names()
 dense = vectors.todense()
 denselist = dense.tolist()
 df = pd.DataFrame(denselist, columns=feature_names)
+print('TF-IDF vector')
 print(df)
